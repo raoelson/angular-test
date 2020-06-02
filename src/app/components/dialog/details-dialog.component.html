@@ -1,0 +1,22 @@
+<div class="command-detail">
+    <h2 mat-dialog-title>Mise à jour</h2>
+    <mat-dialog-content fxLayout="column">
+        <form [formGroup]="form">
+            <div class="ckp-action">
+                <mat-form-field>
+                    <input type="text" placeholder="original Title" matInput formControlName="originalTitle">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" placeholder="Primary title" matInput formControlName="primaryTitle">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" placeholder="Start year" aria-label="Number" matInput formControlName="startYear">
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayout fxLayoutAlign="end center">
+        <button mat-flat-button color="primary" (click)="add(form.value)">Modifier</button>
+        <button mat-button mat-dialog-close>Fermer</button>
+    </mat-dialog-actions>
+</div>

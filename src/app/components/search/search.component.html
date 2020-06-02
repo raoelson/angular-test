@@ -1,0 +1,21 @@
+<form [formGroup]="form">
+    <div class="ckp-action">
+        <mat-form-field>
+            <input type="text" placeholder="original Title" matInput formControlName="originalTitle" [matAutocomplete]="auto_">
+            <mat-autocomplete #auto_="matAutocomplete">
+                <mat-option *ngFor="let _option of optionsTitle" [value]="_option">
+                    {{_option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" placeholder="Start year" aria-label="Number" matInput formControlName="startYear" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of optionsYear" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <button mat-flat-button color="primary" (click)="search(form.value)">Recherche</button>
+    </div>
+</form>

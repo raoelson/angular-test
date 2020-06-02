@@ -1,0 +1,2 @@
+<app-search [data]="_datasource" (groupFilters)="filters($event)"></app-search>
+<app-table [columns]="columns" [data]="datasource" [options]="options" [(selectedRows)]="selectedCommands"></app-table>
